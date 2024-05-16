@@ -12,9 +12,27 @@ export function Counter() {
   }
   return (
     <div>
+      {theCountChanged()}
       <p>
         Count: {count} <button onClick={handleClickButton}>Click Me!</button>
-        {theCountChanged()}
+      </p>
+      <p>
+        <button
+          onClick={function () {
+            setCount(count + 2)
+          }}
+        >
+          by 2
+        </button>
+      </p>
+      <p>
+        <button
+          onClick={function () {
+            setCount(count * 2)
+          }}
+        >
+          doubled
+        </button>
       </p>
     </div>
   )
